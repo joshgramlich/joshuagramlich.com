@@ -1,10 +1,6 @@
 body {
 
-    max-width: 900px;
-
-    margin: auto;
-
-    padding: 20px;
+    margin: 0;
 
     font-family:
         "Palatino Linotype",
@@ -17,12 +13,22 @@ body {
     color: #000;
 
     background-image: url("../images/background.png");
-
     background-size: cover;
-
+    background-position: center;
     background-repeat: no-repeat;
 
-    background-attachment: fixed;
+    /* IMPORTANT:
+       iOS Safari hates fixed backgrounds */
+    background-attachment: scroll;
+}
+
+.container {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 20px;
 
 }
 
@@ -230,4 +236,40 @@ html {
         font-size: 1.4rem;
     }
 
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 1.5rem 1.2rem;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    main {
+        text-align: left;
+    }
+
+    section {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+}
+
+p {
+    max-width: 70ch;
 }
