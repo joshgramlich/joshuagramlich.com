@@ -1,0 +1,16 @@
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+
+# Python
+__pycache__/
+
+# Linux/macOS
+.DS_Store
+
+# VS Code
+.vscode/
